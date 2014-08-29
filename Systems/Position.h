@@ -7,13 +7,16 @@ namespace Survive {
 	class Position
 	{
 	public:
-		__declspec(dllexport) Position();
-		__declspec(dllexport) Position(int x, int y);
-		__declspec(dllexport) Position(Point2D& position);
+		Position();
+		Position(int x, int y);
+		Position(Point2D& position);
 
-		__declspec(dllexport) ~Position();
+		~Position();
 
-		__declspec(dllexport) int RangeTo(const Position& target);
+		int RangeTo(const Position& target);
+
+		int GetX() const;
+		int GetY() const;
 
 	protected:
 		Point2D _position;
